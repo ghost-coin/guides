@@ -1,5 +1,5 @@
 # RaspberryPi Cold Staking Setup
-Here you will find information about how you can set up a cold staking RasperryPi for the Ghost network. This will allow you to stake your coins continuously on your own "Staking Server" under your controll to maximize earnings from staking rewards.
+Here you will find information about how you can set up a cold staking RasperryPi for the Ghost network. This will allow you to stake your coins continuously on your own "Staking Server" and Privacy-Network-Node under your controll to maximize earnings from staking rewards.
 
 ## RaspberryPi setup
 For this guide we will be using:
