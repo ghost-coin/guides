@@ -250,7 +250,7 @@ ghost@raspberrypi:~/ghostman/bin $
 ### autostart
 after each reeboot you have to start ghostman with
 ```
-bash /~/ghostman/bin/ghostman.sh restert now
+bash /~/ghostman/bin/ghostman.sh restart now
 ```
 or edit your local.rc
 ### backup
