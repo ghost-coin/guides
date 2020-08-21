@@ -244,21 +244,42 @@ ghost@raspberrypi:~/ghostman/bin $
 22. HowTo cold stake your coins in Wallet please look at VPS cold staking Paper
     * https://medium.com/@GhostbyMcAfee/vps-cold-staking-setup-612d6f63242b
 
-
-
-## ToDo
 ### autostart
-after each reeboot you have to start ghostman with
+to activate autostart of ghostd and Webserver:
+edit crontab file with
+```
+crontab -e
+```
+past this 5 lines
+```
+@reboot      sleep 40  && bash /home/ghost/ghostman/bin/ghostman.sh restart now  >> /home/ghost/tmp/Gman_start.log 2>&1
+@reboot      sleep 60  && cd /home/ghost/ghostman/webserver  && /bin/bash /home/ghost/ghostman/webserver/webserver restart  >> /home/ghost/tmp/Gman_WebStart.log 2>&1
+10 0 * * *   cd /home/ghost/ghostman                         && /bin/bash /home/ghost/ghostman/bin/ghostman.sh update       >> /home/ghost/tmp/Gman_update.log 2>&1
+*/5 * * * *  cd /home/ghost/ghostman/webserver               && /bin/bash /home/ghost/ghostman/webserver/scripts/cron.sh    >> /home/ghost/tmp/Gman_WebScript.log 2>&1
+* */2 * * *  cd /home/ghost/ghostman/webserver               && /bin/bash /home/ghost/ghostman/webserver/webserver restart  >> /home/ghost/tmp/Gman_WebStart.log 2>&1
+```
+and save with CTRL-x,y,ENTER
+
+you also can start ghostman with
 ```
 bash /~/ghostman/bin/ghostman.sh restart now
 ```
-or edit your local.rc
+and check status with
+```
+bash /~/ghostman/bin/ghostman.sh status
+```
+
+### Update Ghostman
+run Update with
+```
+bash /~/ghostman/bin/ghostman.sh update
+```
+this will not be necessary because crontab commands above will check for Updates every Day at 00:10
+
+## ToDo
 ### backup
 easiest way is to put SD-Card in PC make a full Image with a Tool like Win32 Disk Imager
 https://sourceforge.net/projects/win32diskimager/
-### webserver
-/ghostman/webserver
-
 
 
 
