@@ -1,6 +1,18 @@
 # RaspberryPi Cold Staking Setup
 Here you will find information about how you can set up a cold staking RasperryPi for the Ghost network. This will allow you to stake your coins continuously on your own "Staking Server" and Privacy-Network-Node under your controll to maximize earnings from staking rewards.
 
+- [Heading](#heading)
+  * [Sub-heading](#sub-heading)
+    + [Sub-sub-heading](#sub-sub-heading)
+- [Heading](#heading-1)
+  * [Sub-heading](#sub-heading-1)
+    + [Sub-sub-heading](#sub-sub-heading-1)
+- [Heading](#heading-2)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+
+  
+
 ## RaspberryPi setup
 For this guide we will be using:
 ### Hardware to prepare
@@ -244,7 +256,7 @@ ghost@raspberrypi:~/ghostman/bin $
 22. HowTo cold stake your coins in Wallet please look at VPS cold staking Paper
     * https://medium.com/@GhostbyMcAfee/vps-cold-staking-setup-612d6f63242b
 
-### autostart
+### Autostart
 to activate autostart of ghostd and Webserver:
 edit crontab file with
 ```
