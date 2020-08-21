@@ -260,11 +260,12 @@ past this 5 lines
 ```
 and save with CTRL-x,y,ENTER
 
-you also can start ghostman with
+
+reboot Rasbperry with
 ```
-bash /~/ghostman/bin/ghostman.sh restart now
+sudo reboot
 ```
-and check status with
+Login again and check status with
 ```
 bash /~/ghostman/bin/ghostman.sh status
 ```
